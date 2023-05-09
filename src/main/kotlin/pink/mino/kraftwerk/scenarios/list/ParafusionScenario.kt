@@ -20,7 +20,7 @@ class ParafusionScenario : Scenario(
     "parafusion",
     Material.BEACON
 ) {
-    val prefix = "&8[&4Parafusion&8]&7"
+    val prefix = "&8[&aParafusion&8]&7"
     var brokenBlocks: HashMap<UUID, HashSet<Block>> = HashMap<UUID, HashSet<Block>>()
 
     @EventHandler

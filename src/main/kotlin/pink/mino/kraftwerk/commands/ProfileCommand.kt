@@ -23,15 +23,15 @@ class ProfileCommand : CommandExecutor {
         if (sender !is Player) {
             return false
         }
-        val gui = GuiBuilder().rows(3).name("&4&lYour Profile").owner(sender)
+        val gui = GuiBuilder().rows(3).name("&a&lYour Profile").owner(sender)
         val settings = ItemBuilder(Material.REDSTONE_COMPARATOR)
-            .name(" &4&lSettings")
+            .name(" &a&lSettings")
             .addLore(" ")
             .addLore(" &7Click to customize your settings. ")
             .addLore(" ")
             .make()
         val stats = ItemBuilder(Material.DIAMOND)
-            .name(" &4&lStatistics")
+            .name(" &a&lStatistics")
             .addLore(" ")
             .addLore(" &7Click to view your player stats. ")
             .addLore(" ")
@@ -41,7 +41,7 @@ class ProfileCommand : CommandExecutor {
         val xpNeeded = JavaPlugin.getPlugin(Kraftwerk::class.java).profileHandler.getProfile(sender.uniqueId)!!.xpNeeded
         val level = JavaPlugin.getPlugin(Kraftwerk::class.java).profileHandler.getProfile(sender.uniqueId)!!.level
         val misc = ItemBuilder(Material.NETHER_STAR)
-            .name(" &4&lMisc.")
+            .name(" &a&lMisc.")
             .addLore(" ")
             .addLore(" &7Your Level ${Chat.dash} &a${level} &8(&a${floor((xp / xpNeeded) * 100)}%&8)")
             .addLore(" &7Chat Mode ${Chat.dash} &f${profile.chatMode}")
@@ -53,7 +53,7 @@ class ProfileCommand : CommandExecutor {
         }
         gui.item(12, settings).onClick runnable@ { inventoryClickEvent ->
             val player = inventoryClickEvent.whoClicked as Player
-            val gui = GuiBuilder().rows(1).name("&4&lPlayer Settings").owner(player)
+            val gui = GuiBuilder().rows(1).name("&a&lPlayer Settings").owner(player)
             val disableRedstonePickup = ItemBuilder(Material.REDSTONE)
             if (profile.disableRedstonePickup) {
                 disableRedstonePickup.name("&a&lDisable Redstone Pickup")

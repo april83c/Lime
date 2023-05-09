@@ -261,12 +261,12 @@ class AuctionScenario : Scenario(
                                                 if (highestBid == -1) {
                                                     ActionBar.sendActionBarMessage(
                                                         player,
-                                                        Chat.colored(prefix + "Current Player ${Chat.dash} &c${currentPlayer?.name} &8| &7Highest Bid ${Chat.dash} &cN/A &7from &4N/A &8(&7Time Left: &c${bidTime}s&8)")
+                                                        Chat.colored(prefix + "Current Player ${Chat.dash} &c${currentPlayer?.name} &8| &7Highest Bid ${Chat.dash} &cN/A &7from &aN/A &8(&7Time Left: &c${bidTime}s&8)")
                                                     )
                                                 } else {
                                                     ActionBar.sendActionBarMessage(
                                                         player,
-                                                        Chat.colored(prefix + "Current Player ${Chat.dash} &c${currentPlayer?.name} &8| &7Highest Bid ${Chat.dash} &c${highestBid} &7from &4${highestBidder?.name} &8(&7Time Left: &c${bidTime}s&8)")
+                                                        Chat.colored(prefix + "Current Player ${Chat.dash} &c${currentPlayer?.name} &8| &7Highest Bid ${Chat.dash} &c${highestBid} &7from &a${highestBidder?.name} &8(&7Time Left: &c${bidTime}s&8)")
                                                     )
                                                 }
                                             }

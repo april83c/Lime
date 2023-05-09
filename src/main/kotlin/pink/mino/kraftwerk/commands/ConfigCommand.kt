@@ -80,11 +80,11 @@ class ConfigCommand : CommandExecutor {
             sender.sendMessage("You can't use this command as you technically aren't a player.")
             return false
         }
-        val gui = GuiBuilder().rows(3).name(ChatColor.translateAlternateColorCodes('&', "&4&lGame Configuration")).owner(sender)
+        val gui = GuiBuilder().rows(3).name(ChatColor.translateAlternateColorCodes('&', "&a&lGame Configuration")).owner(sender)
 
         sender.sendMessage(Chat.colored("${Chat.prefix} Opening the UHC configuration..."))
         val options = ItemBuilder(Material.LAVA_BUCKET)
-            .name(" &4&lGeneral Settings ")
+            .name(" &a&lGeneral Settings ")
             .addLore(" ")
             .addLore(" &7Horses ${Chat.dash} &7${getOption("horses")} ")
             .addLore(" &7Starter Food ${Chat.dash} &f${SettingsFeature.instance.data!!.getInt("game.starterfood")} ")
@@ -112,7 +112,7 @@ class ConfigCommand : CommandExecutor {
         val host = ItemBuilder(Material.SKULL_ITEM)
             .toSkull()
             .setOwner(ign)
-            .name(" &4&lHost ")
+            .name(" &a&lHost ")
             .addLore(" ")
             .addLore(" &7Host ${Chat.dash} &f${SettingsFeature.instance.data!!.getString("game.host")} ")
             .addLore(" ")
@@ -128,7 +128,7 @@ class ConfigCommand : CommandExecutor {
             Chat.sendMessage(sender, "${Chat.prefix} Matchpost: &fhttps://hosts.uhc.gg/m/${SettingsFeature.instance.data!!.getInt("matchpost.id")} ")
         }
         val events = ItemBuilder(Material.WATCH)
-            .name(" &4&lEvents")
+            .name(" &a&lEvents")
             .addLore(" ")
             .addLore(" &7Final Heal is given in &f${getEventTime("final-heal")} minutes ")
             .addLore(" &7PvP is enabled in &f${getEventTime("pvp") + getEventTime("final-heal")} minutes ")
@@ -144,7 +144,7 @@ class ConfigCommand : CommandExecutor {
             }
         }
         val healConfig = ItemBuilder(Material.GOLDEN_APPLE)
-            .name(" &4&lHealing Config")
+            .name(" &a&lHealing Config")
             .addLore(" ")
             .addLore(" &7Absorption ${Chat.dash} &7${getOption("absorption")} ")
             .addLore(" ")
@@ -164,7 +164,7 @@ class ConfigCommand : CommandExecutor {
             "${SettingsFeature.instance.worlds!!.get("${SettingsFeature.instance.data!!.get("pregen.world")}.canerate")}% Increased"
         }
         val ratesConfig = ItemBuilder(Material.FLINT)
-            .name(" &4&lRates Config")
+            .name(" &a&lRates Config")
             .addLore(" ")
             .addLore(" &7Apple Rates ${Chat.dash} &a${SettingsFeature.instance.data!!.getInt("game.rates.apple")}% ")
             .addLore(" &7Flint Rates ${Chat.dash} &a${SettingsFeature.instance.data!!.getInt("game.rates.flint")}% ")
@@ -185,7 +185,7 @@ class ConfigCommand : CommandExecutor {
         }
         val teamConfig = ItemBuilder(Material.IRON_SWORD)
             .setAmount(SettingsFeature.instance.data!!.getInt("game.teamSize"))
-            .name(" &4&lTeam Config")
+            .name(" &a&lTeam Config")
             .noAttributes()
             .addLore("")
         if (SettingsFeature.instance.data!!.getString("matchpost.team") == "Auctions") {
@@ -208,7 +208,7 @@ class ConfigCommand : CommandExecutor {
             }
         }
         val scenarios = ItemBuilder(Material.EMERALD)
-            .name(" &4&lScenarios ")
+            .name(" &a&lScenarios ")
             .addLore(" ")
             .addLore(" &7Scenarios &8(&e${ScenarioHandler.getActiveScenarios().size}&8) ${Chat.dash} ")
         for (scenario in ScenarioHandler.getActiveScenarios()) {
@@ -222,7 +222,7 @@ class ConfigCommand : CommandExecutor {
             }
         }
         val enchanting = ItemBuilder(Material.ENCHANTMENT_TABLE)
-            .name(" &4&lEnchanting Config ")
+            .name(" &a&lEnchanting Config ")
             .addLore(" ")
             .addLore(" &7Enchanting ${Chat.dash} &e1.8 ")
             .addLore("")
@@ -238,7 +238,7 @@ class ConfigCommand : CommandExecutor {
             }
         }
         val border = ItemBuilder(Material.BEDROCK)
-            .name(" &4&lBorder Config ")
+            .name(" &a&lBorder Config ")
             .addLore(" ")
             .addLore(" &7Size ${Chat.dash} &f${SettingsFeature.instance.data!!.getInt("pregen.border") * 2}x${SettingsFeature.instance.data!!.getInt("pregen.border") * 2} &8(&f±${SettingsFeature.instance.data!!.getInt("pregen.border")}&8) ")
             .addLore(" ")
@@ -261,7 +261,7 @@ class ConfigCommand : CommandExecutor {
             "&b${SettingsFeature.instance.worlds!!.get("${SettingsFeature.instance.data!!.get("pregen.world")}.orerates.diamond")}% Removed"
         }
         val miningConfig = ItemBuilder(Material.DIAMOND_PICKAXE)
-            .name(" &4&lMining Config ")
+            .name(" &a&lMining Config ")
             .noAttributes()
             .addLore(" ")
             .addLore(" &7F5 Abuse ${Chat.dash} ${getRule("f5abuse")} ")
@@ -284,7 +284,7 @@ class ConfigCommand : CommandExecutor {
             }
         }
         val netherConfig = ItemBuilder(Material.NETHERRACK)
-            .name(" &4&lNether Config ")
+            .name(" &a&lNether Config ")
             .addLore(" ")
             .addLore(" &7Nether ${Chat.dash} &f${getNether("nether")} ")
             .addLore(" &7Nerfed Quartz ${Chat.dash} &f${getNether("nerfedquartz")} ")
@@ -298,14 +298,14 @@ class ConfigCommand : CommandExecutor {
             .addLore(" ")
             .make()
         val editConfig = ItemBuilder(Material.COMMAND)
-            .name(" &4&lEdit Config ")
+            .name(" &a&lEdit Config ")
             .addLore(" ")
             .addLore(" &7Click here to edit the UHC configuration. ")
             .addLore(" ")
             .make()
 
         val pvpConfig = ItemBuilder(Material.BOOK_AND_QUILL)
-            .name(" &4&lPvP/Meetup Config ")
+            .name(" &a&lPvP/Meetup Config ")
             .addLore(" ")
             .addLore(" &7Stalking ${Chat.dash} &f${getRule("stalking")}")
             .addLore(" &7Stealing ${Chat.dash} &f${getRule("stealing")}")
@@ -320,7 +320,7 @@ class ConfigCommand : CommandExecutor {
             .addLore(" ")
             .make()
         val specialsConfig = ItemBuilder(Material.BLAZE_POWDER)
-            .name(" &4&lSpecial Options ")
+            .name(" &a&lSpecial Options ")
             .addLore(" ")
             .addLore(" &7Fire Resistance before PvP ${Chat.dash} &f${getSpecials("frbp")} ")
             .addLore(" &7Absorption before PvP ${Chat.dash} &f${getSpecials("abp")} ")
@@ -329,7 +329,7 @@ class ConfigCommand : CommandExecutor {
             .addLore(" ")
             .make()
         val privateRoundConfig = ItemBuilder(Material.NAME_TAG)
-            .name(" &4&lPrivate Options")
+            .name(" &a&lPrivate Options")
             .addLore(" ")
             .addLore(" &7Private Mode ${Chat.dash} &f${getOption("private")}" )
             .addLore(" &7No Branding ${Chat.dash} &f${getOption("noBranding")} ")

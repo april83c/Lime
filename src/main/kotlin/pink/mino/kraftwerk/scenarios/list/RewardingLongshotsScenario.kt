@@ -20,7 +20,7 @@ class RewardingLongshotsScenario : Scenario(
     "rewardinglongshots",
     Material.ARROW
 ) {
-    val prefix = "&8[&4Longshots&8]&7"
+    val prefix = "&8[&aLongshots&8]&7"
 
     @EventHandler
     fun onPlayerShoot(e: EntityDamageByEntityEvent) {

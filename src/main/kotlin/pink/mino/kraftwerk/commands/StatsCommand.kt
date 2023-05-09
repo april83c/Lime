@@ -49,7 +49,7 @@ class StatsCommand : CommandExecutor {
             sender.sendMessage("You can't use this command as you technically aren't a player.")
             return false
         }
-        val gui = GuiBuilder().rows(1).name(ChatColor.translateAlternateColorCodes('&', "&4Stats")).owner(sender)
+        val gui = GuiBuilder().rows(1).name(ChatColor.translateAlternateColorCodes('&', "&aStats")).owner(sender)
         val target: OfflinePlayer = if (args.isEmpty()) {
             sender
         } else {
@@ -64,7 +64,7 @@ class StatsCommand : CommandExecutor {
             }
             .thenAcceptSync { statsPlayer ->
                 val ores = ItemBuilder(Material.DIAMOND_ORE)
-                    .name(" &4&lOres")
+                    .name(" &a&lOres")
                     .addLore(" ")
                     .addLore(" &7Diamonds Mined ${Chat.dash} &f${statsPlayer.diamondsMined}")
                     .addLore(" &7Gold Mined ${Chat.dash} &f${statsPlayer.goldMined}")
@@ -72,7 +72,7 @@ class StatsCommand : CommandExecutor {
                     .addLore(" ")
                     .make()
                 val general = ItemBuilder(Material.DIAMOND)
-                    .name(" &4&lGeneral")
+                    .name(" &a&lGeneral")
                     .addLore(" ")
                     .addLore(" &7Kills ${Chat.dash} &f${statsPlayer.kills}")
                     .addLore(" &7Deaths ${Chat.dash} &f${statsPlayer.deaths}")
@@ -85,7 +85,7 @@ class StatsCommand : CommandExecutor {
                     .make()
                 val pvp = ItemBuilder(Material.DIAMOND_SWORD)
                     .noAttributes()
-                    .name(" &4&lPvP")
+                    .name(" &a&lPvP")
                     .addLore(" ")
                     .addLore(" &7Damage Dealt ${Chat.dash } &f${round(statsPlayer.damageDealt)}❤")
                     .addLore(" &7Damage Taken ${Chat.dash } &f${round(statsPlayer.damageTaken)}❤")
@@ -98,7 +98,7 @@ class StatsCommand : CommandExecutor {
                     .make()
                 val arena = ItemBuilder(Material.IRON_SWORD)
                     .noAttributes()
-                    .name(" &4&lArena")
+                    .name(" &a&lArena")
                     .addLore(" ")
                     .addLore(" &7Kills ${Chat.dash} &f${statsPlayer.arenaKills}")
                     .addLore(" &7Deaths ${Chat.dash}&f ${statsPlayer.arenaDeaths}")
@@ -106,7 +106,7 @@ class StatsCommand : CommandExecutor {
                     .addLore(" ")
                     .make()
                 val misc = ItemBuilder(Material.WORKBENCH)
-                    .name(" &4&lMisc.")
+                    .name(" &a&lMisc.")
                     .addLore(" ")
                     .addLore(" &7Times Enchanted ${Chat.dash} &f${statsPlayer.timesEnchanted}")
                     .addLore(" &7Times Crafted  ${Chat.dash} &f${statsPlayer.timesCrafted}")
@@ -125,7 +125,7 @@ class StatsCommand : CommandExecutor {
                     .make()
 
                 val staff = ItemBuilder(Material.IRON_BLOCK)
-                    .name(" &4&lStaff")
+                    .name(" &a&lStaff")
                     .addLore(" ")
                     .addLore(" &7Time Spectated ${Chat.dash} &f${timeToString(round(statsPlayer.timeSpectated.toDouble() / 1000).toLong())} ")
                     .addLore(" ")

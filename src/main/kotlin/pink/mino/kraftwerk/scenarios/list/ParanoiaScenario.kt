@@ -22,7 +22,7 @@ class ParanoiaScenario : Scenario(
     "paranoia",
     Material.EYE_OF_ENDER
 ) {
-    val prefix = "&8[&4Paranoia&8]&7"
+    val prefix = "&8[&aParanoia&8]&7"
     var brokenBlocks: HashMap<UUID, HashSet<Block>> = HashMap<UUID, HashSet<Block>>()
 
     @EventHandler

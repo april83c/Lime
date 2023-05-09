@@ -124,7 +124,7 @@ class GenieScenario : Scenario(
             Chat.sendMessage(sender, "$prefix You do not have any wishes!")
             return true
         }
-        val gui = GuiBuilder().name("&4Genie Menu").rows(2).owner(sender)
+        val gui = GuiBuilder().name("&aGenie Menu").rows(2).owner(sender)
         val rewards = calculateRewards(sender)
         for ((index, reward) in rewards.withIndex()) {
             gui.item(index, reward).onClick {

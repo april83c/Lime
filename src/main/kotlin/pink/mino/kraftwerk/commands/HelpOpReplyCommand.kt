@@ -41,12 +41,12 @@ class HelpOpReplyCommand : CommandExecutor {
             Chat.sendMessage(sender, "${Chat.prefix} Invalid ID: &f/hr <id> <reply>&7.")
             return false
         }
-        Chat.sendMessage(player, "&8[&4Help-OP&8]&f ${sender.name}&7 replied with ${Chat.dash} &f&o${msg}")
-        Chat.sendMessage(sender, "&8[&4Help-OP&8]&7 Successfully responded to &f${player.name} ${Chat.dash} &f&o${msg}")
+        Chat.sendMessage(player, "&8[&aHelp-OP&8]&f ${sender.name}&7 replied with ${Chat.dash} &f&o${msg}")
+        Chat.sendMessage(sender, "&8[&aHelp-OP&8]&7 Successfully responded to &f${player.name} ${Chat.dash} &f&o${msg}")
         HelpOp.answered(args[0].toInt())
         for (p in Bukkit.getOnlinePlayers()) {
             if (SpecFeature.instance.getSpecs().contains(p.name) && p != sender) {
-                if (player.name !== sender.name) Chat.sendMessage(p, "&8[&4Help-OP&8]&f ${sender.name}&7 responded to &f${player.name}&7 ${Chat.dash} &f&o${msg}")
+                if (player.name !== sender.name) Chat.sendMessage(p, "&8[&aHelp-OP&8]&f ${sender.name}&7 responded to &f${player.name}&7 ${Chat.dash} &f&o${msg}")
             }
         }
         return true

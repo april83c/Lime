@@ -33,7 +33,7 @@ class Vote(val question: String) {
 
     fun startTimer() {
         for (online: Player in Bukkit.getOnlinePlayers()) {
-            online.sendTitle(Chat.colored("&4&lNew Vote!"), Chat.colored("&7Vote using &a/yes &7or &c/no&7!"))
+            online.sendTitle(Chat.colored("&a&lNew Vote!"), Chat.colored("&7Vote using &a/yes &7or &c/no&7!"))
         }
         VoteTimer(this).runTaskTimer(JavaPlugin.getPlugin(Kraftwerk::class.java), 0L, 20L)
         Bukkit.broadcastMessage(Chat.colored("${Chat.prefix} Poll: &c${question} &8|&7 Use &a/yes &7or &c/no&7 to respond."))

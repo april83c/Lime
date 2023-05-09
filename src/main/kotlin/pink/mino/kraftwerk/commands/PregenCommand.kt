@@ -183,7 +183,7 @@ class PregenCommand : CommandExecutor {
                     Chat.sendMessage(sender, "${Chat.prefix} There is no valid pregeneration task running.")
                 }
             } else {
-                val gui = GuiBuilder().name("&4Pregeneration Config").rows(1).owner(sender as Player)
+                val gui = GuiBuilder().name("&aPregeneration Config").rows(1).owner(sender as Player)
                 Chat.sendMessage(sender, "${Chat.prefix} &7Opening pregeneration config for &7'&f${args[0]}&7'...")
                 val player = sender
                 val pregenConfig = PregenConfigHandler.addConfig(player, PregenConfig(player, args[0]))

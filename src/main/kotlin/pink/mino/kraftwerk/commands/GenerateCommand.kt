@@ -35,7 +35,7 @@ class GenerateTask(val world: World, private val chunks: ArrayList<Location>) : 
             }
         }
         for (player in Bukkit.getOnlinePlayers()) {
-            ActionBar.sendActionBarMessage(player, ChatColor.translateAlternateColorCodes('&', "&8[&4Scenario Generation&8] &7Chunks Left: &c${chunks.size}&8/&c${size} &8| &7World: &8'&c${world.name}&8'"))
+            ActionBar.sendActionBarMessage(player, ChatColor.translateAlternateColorCodes('&', "&8[&aScenario Generation&8] &7Chunks Left: &c${chunks.size}&8/&c${size} &8| &7World: &8'&c${world.name}&8'"))
         }
     }
 }

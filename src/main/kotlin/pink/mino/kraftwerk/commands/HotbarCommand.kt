@@ -23,7 +23,7 @@ class HotbarCommand : CommandExecutor {
                 sender.sendMessage(Chat.colored("&8[&cArena&8]&7 &7You can't use this command in the Arena."))
                 return false
             }
-            val gui = GuiBuilder().rows(1).name(ChatColor.translateAlternateColorCodes('&', "&4Hotbar Editor"))
+            val gui = GuiBuilder().rows(1).name(ChatColor.translateAlternateColorCodes('&', "&aHotbar Editor"))
             gui.item(0, ItemStack(Material.DIAMOND_SWORD))
             gui.item(1, ItemStack(Material.FISHING_ROD))
             gui.item(2, ItemStack(Material.BOW))

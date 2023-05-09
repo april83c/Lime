@@ -111,8 +111,8 @@ class SpawnFeature : Listener {
                     var purchases: List<Purchase> = Gson().fromJson(response.toString(), type)
                     recent.clearLines()
                     highestHolo.clearLines()
-                    recent.appendTextLine(Chat.colored("&4&lRecent Purchase"))
-                    highestHolo.appendTextLine(Chat.colored("&4&lHighest Purchase"))
+                    recent.appendTextLine(Chat.colored("&a&lRecent Purchase"))
+                    highestHolo.appendTextLine(Chat.colored("&a&lHighest Purchase"))
                     val loc1 = Location(
                         Bukkit.getWorld("Spawn"),
                         -722.5,
