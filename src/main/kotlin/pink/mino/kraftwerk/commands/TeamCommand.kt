@@ -753,7 +753,7 @@ class TeamCommand : CommandExecutor {
             Bukkit.broadcastMessage(Chat.colored("${Chat.prefix} &cRed&7 vs &9Blue&7 teams have been randomized."))
         } else if (args[0] == "color") {
             if (!PerkChecker.checkPerk(sender as Player, "uhc.donator.teamColors")) {
-                Chat.sendMessage(sender, "&cBuy &6Gold&c to use this perk. &eapplejuice.tebex.io")
+                Chat.sendMessage(sender, "&cBuy &6Gold&c to use this perk. &estore.raimu.space")
                 return false
             }
             if (TeamsFeature.manager.getTeam(sender) == null) {

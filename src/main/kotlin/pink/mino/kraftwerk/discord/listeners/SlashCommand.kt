@@ -21,21 +21,21 @@ class SlashCommand : ListenerAdapter() {
             "online" -> {
                 val embed = EmbedBuilder()
                 embed.setColor(Color(255, 61, 61))
-                embed.setAuthor("applejuice — Online players", "https://dsc.gg/apple-juice", event.jda.selfUser.avatarUrl)
+                embed.setAuthor("Raimu — Online players", "https://raimu.space/discord", event.jda.selfUser.avatarUrl)
                 embed.setDescription("There are currently **${Bukkit.getServer().onlinePlayers.size} players** online.")
                 event.replyEmbeds(embed.build()).setEphemeral(false).queue()
             }
             "ip" -> {
                 val embed = EmbedBuilder()
                 embed.setColor(Color(255, 61, 61))
-                embed.setAuthor("applejuice — IP Address", "https://dsc.gg/apple-juice", event.jda.selfUser.avatarUrl)
-                embed.setDescription("The IP address to the server is :beverage_box: `applejuice.games`.")
+                embed.setAuthor("Raimu — IP Address", "https://raimu.space/discord", event.jda.selfUser.avatarUrl)
+                embed.setDescription("The IP address to the server is `raimu.space`.")
                 event.replyEmbeds(embed.build()).setEphemeral(false).queue()
             }
             "togglealerts" -> {
                 val embed = EmbedBuilder()
                 embed.setColor(Color(255, 61, 61))
-                embed.setAuthor("applejuice — Toggle alerts", "https://dsc.gg/apple-juice", event.jda.selfUser.avatarUrl)
+                embed.setAuthor("Raimu — Toggle alerts", "https://raimu.space/discord", event.jda.selfUser.avatarUrl)
                 if (member!!.roles.contains(event.jda.getRoleById(793406242013839381))) {
                     if (guild != null) {
                         guild.getRoleById(793406242013839381)?.let { guild.removeRoleFromMember(member.id, it) }?.queue()
@@ -57,7 +57,7 @@ class SlashCommand : ListenerAdapter() {
                     Schedulers.sync().run runnable@ {
                         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "wl add $player")
                     }
-                    event.reply("**${MarkdownSanitizer.escape(player)}** has been whitelisted on the server, connect using `applejuice.games`.").queue()
+                    event.reply("**${MarkdownSanitizer.escape(player)}** has been whitelisted on the server, connect using `raimu.space`.").queue()
                 } else {
                     event.reply("Sorry, but whitelists are not available at this time!").setEphemeral(true).queue()
                 }
@@ -69,7 +69,7 @@ class SlashCommand : ListenerAdapter() {
                 }
                 val embed = EmbedBuilder()
                 embed.setColor(Color(255, 61, 61))
-                embed.setAuthor("applejuice — Scenario List", "https://dsc.gg/apple-juice", event.jda.selfUser.avatarUrl)
+                embed.setAuthor("Raimu — Scenario List", "https://raimu.space/discord", event.jda.selfUser.avatarUrl)
                 embed.setDescription("Scenarios: `${list.joinToString(", ")}`")
                 event.replyEmbeds(embed.build()).setEphemeral(false).queue()
             }

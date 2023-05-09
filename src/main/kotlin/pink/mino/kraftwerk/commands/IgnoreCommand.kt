@@ -39,7 +39,7 @@ class IgnoreCommand : CommandExecutor {
             return false
         }
         if (player.hasPermission("uhc.staff")) {
-            Chat.sendMessage(sender, "&cYou can't ignore this player, they are a staff member, contact us on Discord regarding feedback.")
+            Chat.sendMessage(sender, "&cYou can't ignore this player as they are a staff member. Contact us on Discord regarding feedback.")
             return false
         }
         val list = JavaPlugin.getPlugin(Kraftwerk::class.java).profileHandler.getProfile(sender.uniqueId)!!.ignored

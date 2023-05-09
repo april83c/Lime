@@ -88,7 +88,7 @@ class MobEggsListener : Listener{
         if (event.item.type != Material.EGG) return
         val player = event.player
         if (!PerkChecker.checkPerk(player, "mobEggs")) {
-            player.sendMessage(Chat.colored("&cYou do not have the Mob Eggs perk, buy a rank on the store at &eapplejuice.tebex.io&c!"))
+            player.sendMessage(Chat.colored("&cYou do not have the Mob Eggs perk, buy a rank on the store at &estore.raimu.space&c!"))
             event.isCancelled = true
             return
         }

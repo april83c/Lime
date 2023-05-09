@@ -77,7 +77,7 @@ class FlyCommand : CommandExecutor {
                 }
                 return true
             } else {
-                Chat.sendMessage(sender, "&6Gold&7 ranks and above can fly in spawn. Buy it at the store &eapplejuice.tebex.io")
+                Chat.sendMessage(sender, "&6Gold&7 ranks and above can fly in spawn. Buy one at the store at &estore.raimu.space&7!")
                 return false
             }
         }

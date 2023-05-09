@@ -19,7 +19,7 @@ class LapisCommand : CommandExecutor {
             return false
         }
         if (!PerkChecker.checkPerk(sender, "uhc.donator.togglePickups")) {
-            Chat.sendMessage(sender, "&cYou must be &6Gold&c to use this command. Buy it at &eapplejuice.tebex.io")
+            Chat.sendMessage(sender, "&cYou must be &6Gold&c to use this command. Buy it at &estore.raimu.space&7!")
             return false
         }
         if (PickupFeature.instance.lapisPlayers.contains(sender)) {

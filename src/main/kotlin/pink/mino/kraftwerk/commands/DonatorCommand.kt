@@ -23,7 +23,7 @@ class DonatorCommand : CommandExecutor {
         }
         val perks = PerkChecker.checkPerks(sender)
         if (perks.isEmpty()) {
-            pink.mino.kraftwerk.utils.Chat.sendMessage(sender, "&cYou do not have any perks, buy some on the store at &eapplejuice.tebex.io&7!")
+            pink.mino.kraftwerk.utils.Chat.sendMessage(sender, "&cYou do not have any perks, buy some on the store at &estore.raimu.space&7!")
             return true
         }
         val gui = GuiBuilder().rows(perks.size / 9 + 1).name("&2&lDonator Perks").owner(sender)

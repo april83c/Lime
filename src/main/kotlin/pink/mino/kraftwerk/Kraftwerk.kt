@@ -265,11 +265,11 @@ class Kraftwerk : ExtendedJavaPlugin() {
                 ScheduleOpening(SettingsFeature.instance.data!!.getString("matchpost.opens")).runTaskTimer(this, 0L, 300L)
             }
             if (SettingsFeature.instance.data!!.getString("matchpost.host") == null) {
-                Discord.instance!!.presence.activity = Activity.playing("applejuice.games")
+                Discord.instance!!.presence.activity = Activity.playing("raimu.space")
             }
             else Discord.instance!!.presence.activity = Activity.playing(SettingsFeature.instance.data!!.getString("matchpost.host"))
         } else {
-            Discord.instance!!.presence.activity = Activity.playing("applejuice.games")
+            Discord.instance!!.presence.activity = Activity.playing("raimu.space")
             SettingsFeature.instance.data!!.set("matchpost.cancelled", null)
             SettingsFeature.instance.saveData()
         }

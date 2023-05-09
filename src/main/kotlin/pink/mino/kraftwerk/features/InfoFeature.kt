@@ -9,14 +9,12 @@ import kotlin.random.Random
 class InfoFeature : BukkitRunnable() {
     val prefix: String = "&8[&cInfo&8]&7"
     private val announcements = listOf(
-        Chat.colored("$prefix Join our discord server using &f/discord&7!"),
+        Chat.colored("$prefix Join our Discord server at &fhttps://raimu.space/discord&7!"),
         Chat.colored("$prefix Apply for staff using &f/apply&7!"),
         Chat.colored("$prefix Want to host games on here? Apply for us! Use &f/apply&7!"),
-        Chat.colored("$prefix Like our server @ &fnamemc.com/server/applejuice.games&7!"),
+        Chat.colored("$prefix Like our server @ &fnamemc.com/server/raimu.space&7!"),
         Chat.colored("$prefix Want more games hosted? Apply for staff @ &f/apply&7!"),
-        Chat.colored("$prefix Wanna know when games are hosted & more? Join our discord @ &f/discord&7."),
-        Chat.colored("$prefix Follow us on twitter &b@applejuiceuhc&7!"),
-        Chat.colored("$prefix Get notified for games on twitter, follow us at &b@applejuiceuhc&7!"),
+        Chat.colored("$prefix Wanna know when games are hosted & more? Join our discord @ &fhttps://raimu.space/discord&7."),
         Chat.colored("$prefix View the store using &f/store&7!"),
         Chat.colored("$prefix View the server rules using &f/rules&7."),
         Chat.colored("$prefix View the health of other players using &f/health&7!"),

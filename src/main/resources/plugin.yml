@@ -1,6 +1,6 @@
-name: Kraftwerk
-authors: [Minota, MrcsM]
-version: 1.2.0
+name: Lime
+authors: [Minota, MrcsM, april83c]
+version: 1.3.0
 description: Plugin for managing UHCs.
 main: pink.mino.kraftwerk.Kraftwerk
 commands:

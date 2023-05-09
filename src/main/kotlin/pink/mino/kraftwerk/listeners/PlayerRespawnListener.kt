@@ -31,7 +31,7 @@ class PlayerRespawnListener : Listener{
         if (!ConfigOptionHandler.getOption("private")!!.enabled) {
             Bukkit.getScheduler().runTaskLater(JavaPlugin.getPlugin(Kraftwerk::class.java), {
                 if (!e.player.hasPermission("uhc.staff")) {
-                    e.player.kickPlayer(Chat.colored("&7Thank you for playing!\n&7Join our discord for more games: &cdsc.gg/apple-juice"))
+                    e.player.kickPlayer(Chat.colored("&7Thank you for playing!\n&7Join our discord for more games: &craimu.space/discord"))
                 }
             }, 1200L)
         }
