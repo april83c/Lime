@@ -308,7 +308,7 @@ class Kraftwerk : ExtendedJavaPlugin() {
         SettingsFeature.instance.data!!.set("whitelist.enabled", true)
         SettingsFeature.instance.saveData()
         Leaderboards().runTaskTimer(this, 0L, 20L)
-        Bukkit.getLogger().info("Kraftwerk enabled.")
+        Bukkit.getLogger().info("Lime enabled.")
     }
 
     fun setupDataSource() {
