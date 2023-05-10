@@ -107,7 +107,7 @@ class ScheduleBroadcast(private val opening: String) : BukkitRunnable() {
             /*Bukkit.broadcastMessage(Chat.colored("${Chat.prefix} Matchpost posted on discord & twitter! View the tweet here: &b&uhttps://twitter.com/applejuiceuhc/status/${tweet.id}"))*/
             embed.addField("Opening", "<t:${fr}:t> (<t:${fr}:R>)", false)
             embed.addField("Matchpost", "[uhc.gg](https://hosts.uhc.gg/m/${SettingsFeature.instance.data!!.getInt("matchpost.id")})", false)
-            Discord.instance!!.getTextChannelById(1105404498245070929)!!.sendMessage("<@&793406242013839381> (Use `/togglematches` to toggle matchpost alerts)").queue()
+            Discord.instance!!.getTextChannelById(1105404498245070929)!!.sendMessage("<@&1105580703418167407> (Use `/togglematches` to toggle matchpost alerts)").queue()
             Discord.instance!!.getTextChannelById(1105404498245070929)!!.sendMessageEmbeds(embed.build()).queue()
             embed = EmbedBuilder()
             embed.setColor(Color(255, 61, 61))
