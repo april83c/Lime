@@ -8,7 +8,7 @@ import pink.mino.kraftwerk.utils.Chat
 class ServerListPingListener : Listener {
     @EventHandler
     fun onServerListPing(e: ServerListPingEvent) {
-        val text = Chat.colored("&a&lraimu&7&l.space &8(&a1.8.x&8)\n&oReddit UHC server")
+        val text = Chat.colored("        &l&aRaimu&r - &fa 1.8.x Reddit-UHC server&r\n      &7join our discord: &9&nraimu.space/discord")
         e.motd = text
     }
 }
