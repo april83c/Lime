@@ -34,7 +34,7 @@ class DeathLocCommand : CommandExecutor {
         }
         sender.teleport(RespawnFeature.instance.locations[target.uniqueId]!!)
         Chat.sendMessage(sender, "${Chat.prefix} Teleported to &f${target.name}&7's death location.")
-        Chat.sendMessage(sender, "${Chat.prefix} Coordinates: &cX: ${floor(RespawnFeature.instance.locations[target.uniqueId]!!.x)}, Y: ${floor(RespawnFeature.instance.locations[target.uniqueId]!!.y)}, &cZ: ${floor(RespawnFeature.instance.locations[target.uniqueId]!!.z)}")
+        Chat.sendMessage(sender, "${Chat.prefix} Coordinates: &aX: ${floor(RespawnFeature.instance.locations[target.uniqueId]!!.x)}, Y: ${floor(RespawnFeature.instance.locations[target.uniqueId]!!.y)}, &cZ: ${floor(RespawnFeature.instance.locations[target.uniqueId]!!.z)}")
 
         return true
     }

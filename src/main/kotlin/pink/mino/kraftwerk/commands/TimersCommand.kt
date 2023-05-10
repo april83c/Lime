@@ -23,7 +23,7 @@ class TimersCommand : CommandExecutor {
         }
         val valid = arrayListOf<Scenario>()
         Chat.sendMessage(sender, Chat.line)
-        Chat.sendCenteredMessage(sender, "&c&lScenario Timers")
+        Chat.sendCenteredMessage(sender, "&a&lScenario Timers")
         for (scenario in ScenarioHandler.getActiveScenarios()) {
             if (scenario.returnTimer() != null) {
                 valid.add(scenario)
