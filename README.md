@@ -1,3 +1,5 @@
+# This repo has moved to GitLab: https://gitlab.com/raimu.space/Lime
+
 # Lime
 Plugin for managing Raimu. (Fork of [Kraftwerk](https://github.com/applejuice-server/Kraftwerk))
 
